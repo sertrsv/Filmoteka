@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		2F183D35294AC9EC00E4FEDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F183D34294AC9EC00E4FEDF /* AppDelegate.swift */; };
 		2F183D37294AC9EC00E4FEDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F183D36294AC9EC00E4FEDF /* SceneDelegate.swift */; };
-		2F183D39294AC9EC00E4FEDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F183D38294AC9EC00E4FEDF /* ViewController.swift */; };
-		2F183D3C294AC9EC00E4FEDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F183D3A294AC9EC00E4FEDF /* Main.storyboard */; };
 		2F183D3E294AC9ED00E4FEDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F183D3D294AC9ED00E4FEDF /* Assets.xcassets */; };
 		2F183D41294AC9ED00E4FEDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F183D3F294AC9ED00E4FEDF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +17,6 @@
 		2F183D31294AC9EC00E4FEDF /* Filmoteka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filmoteka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F183D34294AC9EC00E4FEDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F183D36294AC9EC00E4FEDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2F183D38294AC9EC00E4FEDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2F183D3B294AC9EC00E4FEDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F183D3D294AC9ED00E4FEDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F183D40294AC9ED00E4FEDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F183D42294AC9ED00E4FEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +54,6 @@
 			children = (
 				2F183D34294AC9EC00E4FEDF /* AppDelegate.swift */,
 				2F183D36294AC9EC00E4FEDF /* SceneDelegate.swift */,
-				2F183D38294AC9EC00E4FEDF /* ViewController.swift */,
-				2F183D3A294AC9EC00E4FEDF /* Main.storyboard */,
 				2F183D3D294AC9ED00E4FEDF /* Assets.xcassets */,
 				2F183D3F294AC9ED00E4FEDF /* LaunchScreen.storyboard */,
 				2F183D42294AC9ED00E4FEDF /* Info.plist */,
@@ -128,7 +122,6 @@
 			files = (
 				2F183D41294AC9ED00E4FEDF /* LaunchScreen.storyboard in Resources */,
 				2F183D3E294AC9ED00E4FEDF /* Assets.xcassets in Resources */,
-				2F183D3C294AC9EC00E4FEDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +152,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F183D39294AC9EC00E4FEDF /* ViewController.swift in Sources */,
 				2F183D35294AC9EC00E4FEDF /* AppDelegate.swift in Sources */,
 				2F183D37294AC9EC00E4FEDF /* SceneDelegate.swift in Sources */,
 			);
@@ -168,14 +160,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2F183D3A294AC9EC00E4FEDF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F183D3B294AC9EC00E4FEDF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2F183D3F294AC9ED00E4FEDF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -313,7 +297,6 @@
 				INFOPLIST_FILE = Filmoteka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -342,7 +325,6 @@
 				INFOPLIST_FILE = Filmoteka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
