@@ -349,6 +349,7 @@
 		2F183D46294AC9ED00E4FEDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_URL = "https://kinopoiskapiunofficial.tech/api/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -377,6 +378,7 @@
 		2F183D47294AC9ED00E4FEDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_URL = "https://kinopoiskapiunofficial.tech/api/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
