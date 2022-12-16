@@ -55,11 +55,9 @@
 		2F183D33294AC9EC00E4FEDF /* Filmoteka */ = {
 			isa = PBXGroup;
 			children = (
-				2F183D34294AC9EC00E4FEDF /* AppDelegate.swift */,
-				2F183D36294AC9EC00E4FEDF /* SceneDelegate.swift */,
-				2F183D3D294AC9ED00E4FEDF /* Assets.xcassets */,
-				2F183D3F294AC9ED00E4FEDF /* LaunchScreen.storyboard */,
-				2F183D42294AC9ED00E4FEDF /* Info.plist */,
+				2F94EE7B294C627400175F80 /* Main Layer */,
+				2F94EE79294C626500175F80 /* Data Layer */,
+				2F94EE7E294C62D200175F80 /* Modules */,
 			);
 			path = Filmoteka;
 			sourceTree = "<group>";
@@ -70,6 +68,56 @@
 				2F6A5226294C600400A5C556 /* NetworkLayer */,
 			);
 			path = Packages;
+			sourceTree = "<group>";
+		};
+		2F94EE79294C626500175F80 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		2F94EE7B294C627400175F80 /* Main Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2F183D34294AC9EC00E4FEDF /* AppDelegate.swift */,
+				2F183D36294AC9EC00E4FEDF /* SceneDelegate.swift */,
+				2F183D42294AC9ED00E4FEDF /* Info.plist */,
+				2F183D3F294AC9ED00E4FEDF /* LaunchScreen.storyboard */,
+				2F94EE7C294C628500175F80 /* Resources */,
+			);
+			path = "Main Layer";
+			sourceTree = "<group>";
+		};
+		2F94EE7C294C628500175F80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2F183D3D294AC9ED00E4FEDF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2F94EE7E294C62D200175F80 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2F94EE80294C630500175F80 /* Film */,
+				2F94EE7F294C62FE00175F80 /* FilmGrid */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		2F94EE7F294C62FE00175F80 /* FilmGrid */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FilmGrid;
+			sourceTree = "<group>";
+		};
+		2F94EE80294C630500175F80 /* Film */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Film;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
