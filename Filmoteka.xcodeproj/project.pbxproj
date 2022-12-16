@@ -16,6 +16,7 @@
 		2F94EE92294C69D700175F80 /* FilmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EE91294C69D700175F80 /* FilmResponse.swift */; };
 		2F94EE94294C69F000175F80 /* PremieresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EE93294C69F000175F80 /* PremieresResponse.swift */; };
 		2F94EE96294C6A2A00175F80 /* FilmRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EE95294C6A2A00175F80 /* FilmRequestFactory.swift */; };
+		2F94EE9B294C8BEF00175F80 /* NetworkLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 2F94EE9A294C8BEF00175F80 /* NetworkLayer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F94EE9B294C8BEF00175F80 /* NetworkLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +167,9 @@
 			dependencies = (
 			);
 			name = Filmoteka;
+			packageProductDependencies = (
+				2F94EE9A294C8BEF00175F80 /* NetworkLayer */,
+			);
 			productName = Filmoteka;
 			productReference = 2F183D31294AC9EC00E4FEDF /* Filmoteka.app */;
 			productType = "com.apple.product-type.application";
@@ -458,6 +463,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F94EE9A294C8BEF00175F80 /* NetworkLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkLayer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F183D29294AC9EC00E4FEDF /* Project object */;
 }
