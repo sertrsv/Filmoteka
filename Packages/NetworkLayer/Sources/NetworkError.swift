@@ -5,7 +5,9 @@
 //  Created by Sergey Tarasov on 12.07.2022.
 //
 
-public enum NetworkError: Error {
+import Foundation
+
+public enum NetworkError: Error, LocalizedError {
 	case invalidResponse
 	case noData
 	case decode
@@ -13,4 +15,23 @@ public enum NetworkError: Error {
 	case unexpectedStatusCode(_ code: Int)
 	case serializationError
 	case unknown(_ error: Error)
+
+	public var errorDescription: String? {
+		switch self {
+		case .invalidResponse:
+			return "Invalid response"
+		case .noData:
+			return "Empty data"
+		case .decode:
+			return "Decode error"
+		case .unauthorized:
+			return "You are not authorized"
+		case .unexpectedStatusCode(let code):
+			return "Unexpected code: \(code)"
+		case .serializationError:
+			return "Error serialization"
+		case .unknown(let error):
+			return "Unknown: \(error.localizedDescription)"
+		}
+	}
 }
