@@ -40,8 +40,6 @@ final class FilmGridView: UIViewController {
 		return collectionView
 	}()
 
-	private var sortAlert: UIAlertController?
-
 	var interactor: FilmGridBusinessLogic?
 	var router: FilmGridRoutingLogic?
 	private var dataSource: FilmGridDataSource?
