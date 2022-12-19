@@ -18,3 +18,9 @@ extension PremieresResponse {
 		let posterUrlPreview: String
 	}
 }
+
+extension PremieresResponse.PremiereResponseItem {
+	var title: String {
+		nameRu ?? nameEn ?? "Unknown"
+	}
+}

@@ -11,6 +11,10 @@ enum FilmRequestFactory {
 	case premieres
 	case item(id: Int)
 
+	private var baseURL: URL {
+		URL(string: AppConfiguration.apiUrl + "v2.2/films/") ?? URL(fileURLWithPath: "")
+	}
+
 	private var path: String {
 		switch self {
 		case .premieres:
@@ -34,9 +38,16 @@ enum FilmRequestFactory {
 		]
 	}
 
+	private var queryItems: [URLQueryItem] {
+		return [
+			.init(name: "year", value: "2022"),
+			.init(name: "month", value: "DECEMBER")
+		]
+	}
+
 	func makeRequest() -> URLRequest {
-		let url = URL(string: AppConfiguration.apiUrl + "v2.2/films/") ?? URL(fileURLWithPath: "")
-		var request = URLRequest(url: url.appendingPathComponent(path))
+		let url = baseURL.appendingPathComponent(path).appending(queryItems: queryItems)
+		var request = URLRequest(url: url)
 		request.httpMethod = method
 		request.allHTTPHeaderFields = header
 		request.timeoutInterval = 10
