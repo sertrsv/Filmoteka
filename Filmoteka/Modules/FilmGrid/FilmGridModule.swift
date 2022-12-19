@@ -12,9 +12,13 @@ enum FilmGridModule {
 	enum GetFilms {
 		struct Request {}
 
-		struct Response {}
+		struct Response {
+			let result: Result<[PremieresResponse.PremiereResponseItem], Error>
+		}
 
-		struct ViewModel {}
+		struct ViewModel {
+			let result: Result<NSDiffableDataSourceSnapshot<FilmGridView.Section, FilmGridView.Item>, Error>
+		}
 	}
 
 	enum OpenFilm {

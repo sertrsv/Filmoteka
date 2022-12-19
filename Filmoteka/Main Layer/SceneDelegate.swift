@@ -16,7 +16,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		willConnectTo session: UISceneSession,
 		options connectionOptions: UIScene.ConnectionOptions
 	) {
-		guard (scene as? UIWindowScene) != nil else { return }
+		guard let windowScene = (scene as? UIWindowScene) else { return }
+
+		let navigationController = UINavigationController()
+
+		let factory = FilmGridFactory()
+		let filmGridViewController = factory.createViewController()
+
+		navigationController.setViewControllers([filmGridViewController], animated: true)
+
+		let window = UIWindow(windowScene: windowScene)
+		window.rootViewController = navigationController
+		window.makeKeyAndVisible()
+
+		self.window = window
 	}
 
 }
