@@ -44,10 +44,11 @@ final class FilmGridView: UIViewController {
 	var router: FilmGridRoutingLogic?
 	private var dataSource: FilmGridDataSource?
 
+	// MARK: - Constraints
+
 	private var staticConstraints: [NSLayoutConstraint] = []
 
 	private var collectionViewConstraints: [NSLayoutConstraint] {
-		guard let view = view else { return [] }
 		return [
 			collectionView.topAnchor.constraint(equalTo: view.topAnchor),
 			collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -77,7 +78,8 @@ final class FilmGridView: UIViewController {
 
 	private func setupComponents() {
 		navigationItem.title = "Премьеры"
-		navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+		navigationController?.navigationBar.prefersLargeTitles = true
+		navigationItem.backBarButtonItem = .init(title: navigationItem.title)
 		view.addSubview(collectionView)
 		view.setNeedsUpdateConstraints()
 	}
@@ -89,13 +91,14 @@ final class FilmGridView: UIViewController {
 
 				let itemSize = NSCollectionLayoutSize(
 					widthDimension: .fractionalWidth(1.0),
-					heightDimension: .fractionalHeight(1.0))
+					heightDimension: .fractionalHeight(1.0)
+				)
 				let item = NSCollectionLayoutItem(layoutSize: itemSize)
 				item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
 
 				let groupSize = NSCollectionLayoutSize(
 					widthDimension: .fractionalWidth(isWide ? 0.25 : 0.5),
-					heightDimension: .fractionalWidth((isWide ? 0.25 : 0.5) * 3.2/2)
+					heightDimension: .fractionalWidth((isWide ? 0.25 : 0.5) * 1.6)
 				)
 				let group = NSCollectionLayoutGroup.horizontal(
 					layoutSize: groupSize,
