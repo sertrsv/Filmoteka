@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum NetworkError: Error, LocalizedError {
+public enum NetworkError {
 	case invalidResponse
 	case noData
 	case decode
@@ -15,7 +15,9 @@ public enum NetworkError: Error, LocalizedError {
 	case unexpectedStatusCode(_ code: Int)
 	case serializationError
 	case unknown(_ error: Error)
+}
 
+extension NetworkError: LocalizedError {
 	public var errorDescription: String? {
 		switch self {
 		case .invalidResponse:
