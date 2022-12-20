@@ -145,7 +145,7 @@ extension FilmGridView: FilmGridViewDisplayLogic {
 	}
 
 	func update(with viewModel: FilmGridModule.OpenFilm.ViewModel) {
-		router?.routeToFilm(filmId: viewModel.filmId)
+		router?.route(to: viewModel.film)
 	}
 }
 
@@ -154,7 +154,7 @@ extension FilmGridView: FilmGridViewDisplayLogic {
 extension FilmGridView: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		guard let item = dataSource?.itemIdentifier(for: indexPath) else { return }
-		let request = FilmGridModule.OpenFilm.Request(filmId: item.id)
+		let request = FilmGridModule.OpenFilm.Request(film: .init(id: item.id, title: item.title))
 		interactor?.openFilm(with: request)
 	}
 }

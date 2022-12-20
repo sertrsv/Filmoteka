@@ -39,7 +39,7 @@ final class FilmGridPresenter: FilmGridPresentationLogic {
 	}
 
 	func update(with response: FilmGridModule.OpenFilm.Response) {
-		let viewModel = FilmGridModule.OpenFilm.ViewModel(filmId: response.filmId)
+		let viewModel = FilmGridModule.OpenFilm.ViewModel(film: response.film)
 		DispatchQueue.main.async {
 			self.viewController?.update(with: viewModel)
 		}

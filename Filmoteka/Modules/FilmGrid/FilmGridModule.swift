@@ -23,15 +23,20 @@ enum FilmGridModule {
 
 	enum OpenFilm {
 		struct Request {
-			let filmId: Int
+			let film: Film
 		}
 
 		struct Response {
-			let filmId: Int
+			let film: Film
 		}
 
 		struct ViewModel {
-			let filmId: Int
+			let film: Film
 		}
+	}
+
+	struct Film {
+		let id: Int
+		let title: String
 	}
 }

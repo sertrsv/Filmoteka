@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FilmGridRoutingLogic {
-	func routeToFilm(filmId: Int)
+	func route(to film: FilmGridModule.Film)
 	func presentAlert(error: Error)
 }
 
@@ -19,7 +19,13 @@ final class FilmGridRouter: FilmGridRoutingLogic {
 		self.viewController = viewController
 	}
 
-	func routeToFilm(filmId: Int) {}
+	func route(to film: FilmGridModule.Film) {
+		let factory = FilmFactory(filmId: film.id)
+		let view = factory.createViewController()
+		view.navigationItem.title = film.title
+		view.navigationItem.largeTitleDisplayMode = .never
+		viewController?.navigationController?.pushViewController(view, animated: true)
+	}
 
 	func presentAlert(error: Error) {
 		let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)

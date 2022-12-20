@@ -37,7 +37,7 @@ final class FilmGridInteractor: FilmGridBusinessLogic {
 	}
 
 	func openFilm(with request: FilmGridModule.OpenFilm.Request) {
-		let response = FilmGridModule.OpenFilm.Response(filmId: request.filmId)
+		let response = FilmGridModule.OpenFilm.Response(film: request.film)
 		presenter.update(with: response)
 	}
 }
