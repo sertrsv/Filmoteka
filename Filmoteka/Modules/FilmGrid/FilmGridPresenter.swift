@@ -20,6 +20,7 @@ final class FilmGridPresenter: FilmGridPresentationLogic {
 	}
 
 	func update(with response: FilmGridModule.GetFilms.Response) {
+		let viewModel: FilmGridModule.GetFilms.ViewModel
 		switch response.result {
 		case let .success(films):
 			var snapshot = NSDiffableDataSourceSnapshot<FilmGridView.Section, FilmGridView.Item>()
@@ -28,15 +29,12 @@ final class FilmGridPresenter: FilmGridPresentationLogic {
 				FilmGridView.Item(id: $0.kinopoiskId, title: $0.title, imageUrl: $0.posterUrlPreview)
 			}
 			snapshot.appendItems(items)
-			let viewModel = FilmGridModule.GetFilms.ViewModel(result: .success(snapshot))
-			DispatchQueue.main.async {
-				self.viewController?.update(with: viewModel)
-			}
+			viewModel = .init(result: .success(snapshot))
 		case let .failure(error):
-			let viewModel = FilmGridModule.GetFilms.ViewModel(result: .failure(error))
-			DispatchQueue.main.async {
-				self.viewController?.update(with: viewModel)
-			}
+			viewModel = .init(result: .failure(error))
+		}
+		DispatchQueue.main.async {
+			self.viewController?.update(with: viewModel)
 		}
 	}
 
