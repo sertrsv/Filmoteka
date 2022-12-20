@@ -15,12 +15,12 @@ final class ImageProvider {
 
 	private init() {}
 
-	public func fetchImage(url urlString: String, completion: @escaping (Result<UIImage?, NetworkError>) -> Void) {
+	func fetchImage(url urlString: String, completion: @escaping (Result<UIImage?, NetworkError>) -> Void) {
 		guard let url = URL(string: urlString) else { return }
 		fetchImage(url: url, completion: completion)
 	}
 
-	public func fetchImage(url: URL, completion: @escaping (Result<UIImage?, NetworkError>) -> Void) {
+	func fetchImage(url: URL, completion: @escaping (Result<UIImage?, NetworkError>) -> Void) {
 		let imageKey = NSString(string: url.absoluteString)
 		if let image = cache.object(forKey: imageKey) {
 			completion(.success(image))
