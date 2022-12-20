@@ -5,8 +5,6 @@
 //  Created by Sergey Tarasov on 19.12.2022.
 //
 
-import Foundation
-
 enum FilmModule {
 	enum GetFilm {
 		struct Request { }
