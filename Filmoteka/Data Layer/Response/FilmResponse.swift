@@ -15,3 +15,9 @@ struct FilmResponse: Decodable {
 	let slogan: String?
 	let description: String?
 }
+
+extension FilmResponse {
+	var title: String {
+		nameRu ?? nameEn ?? nameOriginal ?? "Unknown"
+	}
+}
