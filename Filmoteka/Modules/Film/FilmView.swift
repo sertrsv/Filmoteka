@@ -138,9 +138,9 @@ extension FilmView: FilmViewDisplayLogic {
 					DispatchQueue.main.async {
 						self?.posterView.image = image
 					}
-				case .failure:
+				case let .failure(error):
 					DispatchQueue.main.async {
-						self?.posterView.image = UIImage(systemName: "questionmark")
+						self?.router?.presentAlert(error: error)
 					}
 				}
 			}
