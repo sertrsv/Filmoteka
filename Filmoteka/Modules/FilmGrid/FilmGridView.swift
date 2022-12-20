@@ -44,6 +44,8 @@ final class FilmGridView: UIViewController {
 	var router: FilmGridRoutingLogic?
 	private var dataSource: FilmGridDataSource?
 
+	private var rawSnapshot: NSDiffableDataSourceSnapshot<Section, Item>?
+
 	// MARK: - Constraints
 
 	private var staticConstraints: [NSLayoutConstraint] = []
@@ -119,6 +121,13 @@ final class FilmGridView: UIViewController {
 		let refreshControl = UIRefreshControl()
 		refreshControl.addTarget(self, action: #selector(getFilms), for: .valueChanged)
 		self.collectionView.refreshControl = refreshControl
+
+		navigationItem.rightBarButtonItem = .init(image: UIImage(systemName: "arrow.up.arrow.down.circle"))
+		let barButtonMenu = UIMenu(title: "Сортировка", options: .singleSelection, children: [
+			UIAction(title: "По умолчанию", state: .on, handler: sortFilmsByDefault),
+			UIAction(title: "По названию", handler: sortFilmsByTitle)
+		])
+		navigationItem.rightBarButtonItem?.menu = barButtonMenu
 	}
 }
 
@@ -129,6 +138,21 @@ extension FilmGridView {
 		let request = FilmGridModule.GetFilms.Request()
 		interactor?.getFilms(with: request)
 	}
+
+	private func sortFilmsByDefault(_ action: UIAction) {
+		guard let snapshot = rawSnapshot else { return }
+		dataSource?.apply(snapshot)
+	}
+
+	private func sortFilmsByTitle(_ action: UIAction) {
+		var snapshot = dataSource?.snapshot()
+		guard let sortedItems = snapshot?.itemIdentifiers.sorted(by: { $0.title < $1.title }) else { return }
+		snapshot?.deleteAllItems()
+		snapshot?.appendSections([.main])
+		snapshot?.appendItems(sortedItems)
+		guard let sortedSnapshot = snapshot else { return }
+		dataSource?.apply(sortedSnapshot)
+	}
 }
 
 // MARK: - FilmGridViewDisplayLogic
@@ -138,7 +162,8 @@ extension FilmGridView: FilmGridViewDisplayLogic {
 		collectionView.refreshControl?.endRefreshing()
 		switch viewModel.result {
 		case let .success(snapshot):
-			dataSource?.apply(snapshot, animatingDifferences: true)
+			rawSnapshot = snapshot
+			dataSource?.apply(snapshot)
 		case let .failure(error):
 			router?.presentAlert(error: error)
 		}
