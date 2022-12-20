@@ -12,7 +12,6 @@ final class FilmGridCell: UICollectionViewCell {
 		let imageView = UIImageView()
 		imageView.contentMode = .scaleAspectFill
 		imageView.clipsToBounds = true
-		imageView.layer.cornerRadius = 4
 		imageView.translatesAutoresizingMaskIntoConstraints = false
 		return imageView
 	}()
