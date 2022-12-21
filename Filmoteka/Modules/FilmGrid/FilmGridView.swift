@@ -79,9 +79,9 @@ final class FilmGridView: UIViewController {
 	// MARK: - Functions
 
 	private func setupComponents() {
-		navigationItem.title = "Премьеры"
+		title = "Премьеры"
+		navigationItem.title = title
 		navigationController?.navigationBar.prefersLargeTitles = true
-		navigationItem.backBarButtonItem = .init(title: navigationItem.title)
 		view.addSubview(collectionView)
 		view.setNeedsUpdateConstraints()
 	}
