@@ -11,6 +11,30 @@
 		2F183D37294AC9EC00E4FEDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F183D36294AC9EC00E4FEDF /* SceneDelegate.swift */; };
 		2F183D3E294AC9ED00E4FEDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F183D3D294AC9ED00E4FEDF /* Assets.xcassets */; };
 		2F183D41294AC9ED00E4FEDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F183D3F294AC9ED00E4FEDF /* LaunchScreen.storyboard */; };
+		2F6A5227294C600400A5C556 /* NetworkLayer in Resources */ = {isa = PBXBuildFile; fileRef = 2F6A5226294C600400A5C556 /* NetworkLayer */; };
+		2F94EE90294C692800175F80 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EE8F294C692800175F80 /* AppConfig.swift */; };
+		2F94EE92294C69D700175F80 /* FilmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EE91294C69D700175F80 /* FilmResponse.swift */; };
+		2F94EE94294C69F000175F80 /* PremieresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EE93294C69F000175F80 /* PremieresResponse.swift */; };
+		2F94EE96294C6A2A00175F80 /* FilmRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EE95294C6A2A00175F80 /* FilmRequestFactory.swift */; };
+		2F94EE9B294C8BEF00175F80 /* NetworkLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 2F94EE9A294C8BEF00175F80 /* NetworkLayer */; };
+		2F94EE9D294C90A000175F80 /* FilmGridModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EE9C294C90A000175F80 /* FilmGridModule.swift */; };
+		2F94EE9F294C95AB00175F80 /* FilmGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EE9E294C95AB00175F80 /* FilmGridView.swift */; };
+		2F94EEA1294C95B600175F80 /* FilmGridRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EEA0294C95B600175F80 /* FilmGridRouter.swift */; };
+		2F94EEA3294C95C100175F80 /* FilmGridInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EEA2294C95C100175F80 /* FilmGridInteractor.swift */; };
+		2F94EEA5294C968C00175F80 /* FilmGridPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EEA4294C968C00175F80 /* FilmGridPresenter.swift */; };
+		2F94EEA7294C9B4B00175F80 /* FilmGridDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EEA6294C9B4B00175F80 /* FilmGridDataSource.swift */; };
+		2F94EEA9294C9B6800175F80 /* FilmGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EEA8294C9B6800175F80 /* FilmGridCell.swift */; };
+		2F94EEAC294C9DE500175F80 /* String-className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EEAB294C9DE500175F80 /* String-className.swift */; };
+		2F94EEAE294C9DFE00175F80 /* UICollectionView-dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EEAD294C9DFE00175F80 /* UICollectionView-dequeue.swift */; };
+		2F94EEB0294C9E0A00175F80 /* UICollectionView-register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EEAF294C9E0A00175F80 /* UICollectionView-register.swift */; };
+		2FB04512294F7CC000B8FCCF /* FilmGridFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB04511294F7CC000B8FCCF /* FilmGridFactory.swift */; };
+		2FB04514294F892200B8FCCF /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB04513294F892200B8FCCF /* ImageProvider.swift */; };
+		2FB0451729502DBA00B8FCCF /* FilmModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0451629502DBA00B8FCCF /* FilmModule.swift */; };
+		2FB045192950309800B8FCCF /* FilmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB045182950309800B8FCCF /* FilmView.swift */; };
+		2FB0451B295030BA00B8FCCF /* FilmFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0451A295030BA00B8FCCF /* FilmFactory.swift */; };
+		2FB0451D295030C500B8FCCF /* FilmRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0451C295030C500B8FCCF /* FilmRouter.swift */; };
+		2FB0451F295030D500B8FCCF /* FilmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0451E295030D500B8FCCF /* FilmInteractor.swift */; };
+		2FB04521295030DF00B8FCCF /* FilmPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB04520295030DF00B8FCCF /* FilmPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +44,29 @@
 		2F183D3D294AC9ED00E4FEDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F183D40294AC9ED00E4FEDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F183D42294AC9ED00E4FEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F6A5226294C600400A5C556 /* NetworkLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkLayer; sourceTree = "<group>"; };
+		2F94EE8F294C692800175F80 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		2F94EE91294C69D700175F80 /* FilmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmResponse.swift; sourceTree = "<group>"; };
+		2F94EE93294C69F000175F80 /* PremieresResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremieresResponse.swift; sourceTree = "<group>"; };
+		2F94EE95294C6A2A00175F80 /* FilmRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRequestFactory.swift; sourceTree = "<group>"; };
+		2F94EE9C294C90A000175F80 /* FilmGridModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmGridModule.swift; sourceTree = "<group>"; };
+		2F94EE9E294C95AB00175F80 /* FilmGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmGridView.swift; sourceTree = "<group>"; };
+		2F94EEA0294C95B600175F80 /* FilmGridRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmGridRouter.swift; sourceTree = "<group>"; };
+		2F94EEA2294C95C100175F80 /* FilmGridInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmGridInteractor.swift; sourceTree = "<group>"; };
+		2F94EEA4294C968C00175F80 /* FilmGridPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmGridPresenter.swift; sourceTree = "<group>"; };
+		2F94EEA6294C9B4B00175F80 /* FilmGridDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmGridDataSource.swift; sourceTree = "<group>"; };
+		2F94EEA8294C9B6800175F80 /* FilmGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmGridCell.swift; sourceTree = "<group>"; };
+		2F94EEAB294C9DE500175F80 /* String-className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-className.swift"; sourceTree = "<group>"; };
+		2F94EEAD294C9DFE00175F80 /* UICollectionView-dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView-dequeue.swift"; sourceTree = "<group>"; };
+		2F94EEAF294C9E0A00175F80 /* UICollectionView-register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView-register.swift"; sourceTree = "<group>"; };
+		2FB04511294F7CC000B8FCCF /* FilmGridFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmGridFactory.swift; sourceTree = "<group>"; };
+		2FB04513294F892200B8FCCF /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		2FB0451629502DBA00B8FCCF /* FilmModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModule.swift; sourceTree = "<group>"; };
+		2FB045182950309800B8FCCF /* FilmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmView.swift; sourceTree = "<group>"; };
+		2FB0451A295030BA00B8FCCF /* FilmFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmFactory.swift; sourceTree = "<group>"; };
+		2FB0451C295030C500B8FCCF /* FilmRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRouter.swift; sourceTree = "<group>"; };
+		2FB0451E295030D500B8FCCF /* FilmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmInteractor.swift; sourceTree = "<group>"; };
+		2FB04520295030DF00B8FCCF /* FilmPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F94EE9B294C8BEF00175F80 /* NetworkLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +84,7 @@
 		2F183D28294AC9EC00E4FEDF = {
 			isa = PBXGroup;
 			children = (
+				2F6A5221294C5F3C00A5C556 /* Packages */,
 				2F183D33294AC9EC00E4FEDF /* Filmoteka */,
 				2F183D32294AC9EC00E4FEDF /* Products */,
 			);
@@ -52,13 +101,123 @@
 		2F183D33294AC9EC00E4FEDF /* Filmoteka */ = {
 			isa = PBXGroup;
 			children = (
-				2F183D34294AC9EC00E4FEDF /* AppDelegate.swift */,
-				2F183D36294AC9EC00E4FEDF /* SceneDelegate.swift */,
-				2F183D3D294AC9ED00E4FEDF /* Assets.xcassets */,
-				2F183D3F294AC9ED00E4FEDF /* LaunchScreen.storyboard */,
-				2F183D42294AC9ED00E4FEDF /* Info.plist */,
+				2F94EE7B294C627400175F80 /* Main Layer */,
+				2F94EE79294C626500175F80 /* Data Layer */,
+				2F94EE7E294C62D200175F80 /* Modules */,
+				2F94EEAA294C9DA700175F80 /* Extensions */,
 			);
 			path = Filmoteka;
+			sourceTree = "<group>";
+		};
+		2F6A5221294C5F3C00A5C556 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2F6A5226294C600400A5C556 /* NetworkLayer */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		2F94EE79294C626500175F80 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2F94EE97294C6AA300175F80 /* Request */,
+				2F94EE98294C6AAA00175F80 /* Response */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		2F94EE7B294C627400175F80 /* Main Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2F183D34294AC9EC00E4FEDF /* AppDelegate.swift */,
+				2F183D36294AC9EC00E4FEDF /* SceneDelegate.swift */,
+				2F94EE8F294C692800175F80 /* AppConfig.swift */,
+				2F183D42294AC9ED00E4FEDF /* Info.plist */,
+				2F183D3F294AC9ED00E4FEDF /* LaunchScreen.storyboard */,
+				2F94EE7C294C628500175F80 /* Resources */,
+			);
+			path = "Main Layer";
+			sourceTree = "<group>";
+		};
+		2F94EE7C294C628500175F80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2F183D3D294AC9ED00E4FEDF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2F94EE7E294C62D200175F80 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2F94EE80294C630500175F80 /* Film */,
+				2F94EE7F294C62FE00175F80 /* FilmGrid */,
+				2FB04515294F954E00B8FCCF /* Helpers */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		2F94EE7F294C62FE00175F80 /* FilmGrid */ = {
+			isa = PBXGroup;
+			children = (
+				2F94EE9C294C90A000175F80 /* FilmGridModule.swift */,
+				2FB04511294F7CC000B8FCCF /* FilmGridFactory.swift */,
+				2F94EEA0294C95B600175F80 /* FilmGridRouter.swift */,
+				2F94EEA2294C95C100175F80 /* FilmGridInteractor.swift */,
+				2F94EEA4294C968C00175F80 /* FilmGridPresenter.swift */,
+				2F94EEA6294C9B4B00175F80 /* FilmGridDataSource.swift */,
+				2F94EE9E294C95AB00175F80 /* FilmGridView.swift */,
+				2F94EEA8294C9B6800175F80 /* FilmGridCell.swift */,
+			);
+			path = FilmGrid;
+			sourceTree = "<group>";
+		};
+		2F94EE80294C630500175F80 /* Film */ = {
+			isa = PBXGroup;
+			children = (
+				2FB0451629502DBA00B8FCCF /* FilmModule.swift */,
+				2FB0451A295030BA00B8FCCF /* FilmFactory.swift */,
+				2FB0451C295030C500B8FCCF /* FilmRouter.swift */,
+				2FB0451E295030D500B8FCCF /* FilmInteractor.swift */,
+				2FB04520295030DF00B8FCCF /* FilmPresenter.swift */,
+				2FB045182950309800B8FCCF /* FilmView.swift */,
+			);
+			path = Film;
+			sourceTree = "<group>";
+		};
+		2F94EE97294C6AA300175F80 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				2F94EE95294C6A2A00175F80 /* FilmRequestFactory.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		2F94EE98294C6AAA00175F80 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				2F94EE91294C69D700175F80 /* FilmResponse.swift */,
+				2F94EE93294C69F000175F80 /* PremieresResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		2F94EEAA294C9DA700175F80 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2F94EEAB294C9DE500175F80 /* String-className.swift */,
+				2F94EEAD294C9DFE00175F80 /* UICollectionView-dequeue.swift */,
+				2F94EEAF294C9E0A00175F80 /* UICollectionView-register.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2FB04515294F954E00B8FCCF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2FB04513294F892200B8FCCF /* ImageProvider.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +237,9 @@
 			dependencies = (
 			);
 			name = Filmoteka;
+			packageProductDependencies = (
+				2F94EE9A294C8BEF00175F80 /* NetworkLayer */,
+			);
 			productName = Filmoteka;
 			productReference = 2F183D31294AC9EC00E4FEDF /* Filmoteka.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6A5227294C600400A5C556 /* NetworkLayer in Resources */,
 				2F183D41294AC9ED00E4FEDF /* LaunchScreen.storyboard in Resources */,
 				2F183D3E294AC9ED00E4FEDF /* Assets.xcassets in Resources */,
 			);
@@ -130,7 +293,8 @@
 /* Begin PBXShellScriptBuildPhase section */
 		2F183D48294ACB3300E4FEDF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -152,8 +316,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB04512294F7CC000B8FCCF /* FilmGridFactory.swift in Sources */,
+				2F94EEA3294C95C100175F80 /* FilmGridInteractor.swift in Sources */,
+				2F94EEB0294C9E0A00175F80 /* UICollectionView-register.swift in Sources */,
+				2F94EE92294C69D700175F80 /* FilmResponse.swift in Sources */,
+				2FB0451729502DBA00B8FCCF /* FilmModule.swift in Sources */,
+				2F94EEAC294C9DE500175F80 /* String-className.swift in Sources */,
+				2F94EE90294C692800175F80 /* AppConfig.swift in Sources */,
+				2F94EEAE294C9DFE00175F80 /* UICollectionView-dequeue.swift in Sources */,
+				2FB045192950309800B8FCCF /* FilmView.swift in Sources */,
+				2F94EE96294C6A2A00175F80 /* FilmRequestFactory.swift in Sources */,
+				2FB04514294F892200B8FCCF /* ImageProvider.swift in Sources */,
+				2F94EEA1294C95B600175F80 /* FilmGridRouter.swift in Sources */,
+				2F94EE9D294C90A000175F80 /* FilmGridModule.swift in Sources */,
 				2F183D35294AC9EC00E4FEDF /* AppDelegate.swift in Sources */,
+				2FB04521295030DF00B8FCCF /* FilmPresenter.swift in Sources */,
+				2FB0451D295030C500B8FCCF /* FilmRouter.swift in Sources */,
+				2F94EEA5294C968C00175F80 /* FilmGridPresenter.swift in Sources */,
+				2F94EEA9294C9B6800175F80 /* FilmGridCell.swift in Sources */,
+				2FB0451F295030D500B8FCCF /* FilmInteractor.swift in Sources */,
+				2F94EEA7294C9B4B00175F80 /* FilmGridDataSource.swift in Sources */,
 				2F183D37294AC9EC00E4FEDF /* SceneDelegate.swift in Sources */,
+				2F94EE9F294C95AB00175F80 /* FilmGridView.swift in Sources */,
+				2F94EE94294C69F000175F80 /* PremieresResponse.swift in Sources */,
+				2FB0451B295030BA00B8FCCF /* FilmFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,13 +474,14 @@
 		2F183D46294AC9ED00E4FEDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_URL = "https://kinopoiskapiunofficial.tech/api/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QPX4P42KC5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Filmoteka/Info.plist;
+				INFOPLIST_FILE = "Filmoteka/Main Layer/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -316,13 +503,14 @@
 		2F183D47294AC9ED00E4FEDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_URL = "https://kinopoiskapiunofficial.tech/api/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QPX4P42KC5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Filmoteka/Info.plist;
+				INFOPLIST_FILE = "Filmoteka/Main Layer/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -363,6 +551,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F94EE9A294C8BEF00175F80 /* NetworkLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkLayer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F183D29294AC9EC00E4FEDF /* Project object */;
 }
