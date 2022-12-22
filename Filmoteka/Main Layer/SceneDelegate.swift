@@ -18,18 +18,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	) {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 
-		let navigationController = UINavigationController()
-
-		let factory = FilmGridFactory()
-		let filmGridViewController = factory.createViewController()
-
-		navigationController.setViewControllers([filmGridViewController], animated: true)
-
 		let window = UIWindow(windowScene: windowScene)
-		window.rootViewController = navigationController
+		window.rootViewController = makeNavigationController()
 		window.makeKeyAndVisible()
 
 		self.window = window
+	}
+
+	func makeNavigationController() -> UINavigationController {
+		let factory = FilmGridFactory()
+		let filmGridViewController = factory.createViewController()
+
+		let navigationController = UINavigationController(rootViewController: filmGridViewController)
+
+		return navigationController
 	}
 
 }
