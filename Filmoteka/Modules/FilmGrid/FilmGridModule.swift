@@ -7,6 +7,8 @@
 
 import UIKit
 
+// swiftlint:disable nesting
+
 enum FilmGridModule {
 	enum GetFilms {
 		struct Request {}
