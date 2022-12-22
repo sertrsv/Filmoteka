@@ -5,7 +5,6 @@
 //  Created by Sergey Tarasov on 16.12.2022.
 //
 
-import Foundation
 import UIKit
 
 enum FilmGridModule {
