@@ -9,11 +9,7 @@ import UIKit
 import NetworkLayer
 
 final class ImageProvider {
-	static let shared = ImageProvider()
-
-	private let cache = NSCache<NSString, UIImage>()
-
-	private init() {}
+	private static let cache = NSCache<NSString, UIImage>()
 
 	func fetchImage(url urlString: String, completion: @escaping (Result<UIImage?, NetworkError>) -> Void) {
 		guard let url = URL(string: urlString) else { return }
@@ -22,11 +18,11 @@ final class ImageProvider {
 
 	func fetchImage(url: URL, completion: @escaping (Result<UIImage?, NetworkError>) -> Void) {
 		let imageKey = NSString(string: url.absoluteString)
-		if let image = cache.object(forKey: imageKey) {
+		if let image = ImageProvider.cache.object(forKey: imageKey) {
 			completion(.success(image))
 			return
 		}
-		let dataTask = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+		let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
 			if let error = error {
 				completion(.failure(.unknown(error)))
 				return
@@ -45,7 +41,7 @@ final class ImageProvider {
 					completion(.failure(.serializationError))
 					return
 				}
-				self?.cache.setObject(image, forKey: imageKey)
+				ImageProvider.cache.setObject(image, forKey: imageKey)
 				completion(.success(image))
 			case 401:
 				completion(.failure(.unauthorized))
