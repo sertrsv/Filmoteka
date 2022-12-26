@@ -36,7 +36,6 @@ final class FilmGridView: UIViewController {
 		collectionView.delegate = self
 		dataSource = FilmGridDataSource(collectionView: collectionView)
 		collectionView.dataSource = dataSource
-		collectionView.register(FilmGridCell.self)
 		return collectionView
 	}()
 
