@@ -49,7 +49,7 @@ final class FilmView: UIViewController {
 	var interactor: FilmBusinessLogic?
 	var router: FilmRoutingLogic?
 
-	private var imageProvider = ImageProvider.shared
+	private var imageProvider = ImageProvider()
 
 	// MARK: - Constraints
 

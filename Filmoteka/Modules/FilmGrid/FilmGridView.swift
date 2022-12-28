@@ -36,7 +36,6 @@ final class FilmGridView: UIViewController {
 		collectionView.delegate = self
 		dataSource = FilmGridDataSource(collectionView: collectionView)
 		collectionView.dataSource = dataSource
-		collectionView.register(FilmGridCell.self)
 		return collectionView
 	}()
 
@@ -80,7 +79,6 @@ final class FilmGridView: UIViewController {
 
 	private func setupComponents() {
 		title = "Премьеры"
-		navigationItem.title = title
 		navigationController?.navigationBar.prefersLargeTitles = true
 		view.addSubview(collectionView)
 		view.setNeedsUpdateConstraints()
