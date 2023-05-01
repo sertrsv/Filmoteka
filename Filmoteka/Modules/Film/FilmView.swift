@@ -98,7 +98,7 @@ final class FilmView: UIViewController {
 		setupComponents()
 		let request = FilmModule.GetFilm.Request()
         Task {
-            try await interactor?.getFilm(with: request)
+            await interactor?.getFilm(with: request)
         }
 	}
 
