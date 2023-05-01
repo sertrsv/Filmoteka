@@ -7,6 +7,7 @@
 
 import Foundation
 
+@available(*, deprecated, message: "use DefaultNetworkManager instead")
 public final class DefaultNetworkClient: NetworkClient {
 	private static let decoder = JSONDecoder()
 	private let session: URLSession
