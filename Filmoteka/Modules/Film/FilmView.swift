@@ -97,7 +97,9 @@ final class FilmView: UIViewController {
 		super.viewDidLoad()
 		setupComponents()
 		let request = FilmModule.GetFilm.Request()
-		interactor?.getFilm(with: request)
+        Task {
+            try await interactor?.getFilm(with: request)
+        }
 	}
 
 	override func updateViewConstraints() {
