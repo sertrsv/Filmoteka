@@ -134,7 +134,9 @@ final class FilmGridView: UIViewController {
 extension FilmGridView {
 	@objc private func getFilms() {
 		let request = FilmGridModule.GetFilms.Request()
-		interactor?.getFilms(with: request)
+        Task {
+            await interactor?.getFilms(with: request)
+        }
 	}
 
 	private func sortFilmsByDefault(_ action: UIAction) {

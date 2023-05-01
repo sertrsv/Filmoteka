@@ -9,35 +9,35 @@ import Foundation
 import NetworkLayer
 
 protocol FilmGridBusinessLogic {
-	func getFilms(with request: FilmGridModule.GetFilms.Request)
-	func openFilm(with request: FilmGridModule.OpenFilm.Request)
+    func getFilms(with request: FilmGridModule.GetFilms.Request) async
+    func openFilm(with request: FilmGridModule.OpenFilm.Request)
 }
 
 final class FilmGridInteractor: FilmGridBusinessLogic {
-	private let presenter: FilmGridPresentationLogic
-	private let networkClient: NetworkClient
+    private let presenter: FilmGridPresentationLogic
+    private let networkManager: NetworkManager
 
-	init(presenter: FilmGridPresentationLogic, networkClient: NetworkClient) {
-		self.presenter = presenter
-		self.networkClient = networkClient
-	}
+    init(presenter: FilmGridPresentationLogic, networkManager: NetworkManager) {
+        self.presenter = presenter
+        self.networkManager = networkManager
+    }
 
-	func getFilms(with request: FilmGridModule.GetFilms.Request) {
-		let request = FilmRequestFactory.premieres.makeRequest()
-		networkClient.perform(request: request) { [weak self] (result: Result<PremieresResponse, NetworkError>) in
-			var response: FilmGridModule.GetFilms.Response
-			switch result {
-			case let .success(films):
-				response = .init(result: .success(films.items))
-			case let .failure(error):
-				response = .init(result: .failure(error))
-			}
-			self?.presenter.update(with: response)
-		}
-	}
+    func getFilms(with request: FilmGridModule.GetFilms.Request) async {
+        let request = FilmRequestFactory.premieres.makeRequest()
+        let response: FilmGridModule.GetFilms.Response
+        do {
+            let films = try await networkManager.perform(request: request, for: PremieresResponse.self)
+            response = .init(result: .success(films.items))
+        } catch {
+            response = .init(result: .failure(error))
+        }
+        DispatchQueue.main.async { [weak self] in
+            self?.presenter.update(with: response)
+        }
+    }
 
-	func openFilm(with request: FilmGridModule.OpenFilm.Request) {
-		let response = FilmGridModule.OpenFilm.Response(film: request.film)
-		presenter.update(with: response)
-	}
+    func openFilm(with request: FilmGridModule.OpenFilm.Request) {
+        let response = FilmGridModule.OpenFilm.Response(film: request.film)
+        presenter.update(with: response)
+    }
 }

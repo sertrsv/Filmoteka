@@ -8,15 +8,15 @@
 import NetworkLayer
 
 final class FilmGridFactory {
-	init() {}
+    init() {}
 
-	func createViewController() -> FilmGridView {
-		let viewController = FilmGridView()
-		let presenter = FilmGridPresenter(viewController: viewController)
-		let networkClient = DefaultNetworkClient()
-		let interactor = FilmGridInteractor(presenter: presenter, networkClient: networkClient)
-		viewController.interactor = interactor
-		viewController.router = FilmGridRouter(viewController: viewController)
-		return viewController
-	}
+    func createViewController() -> FilmGridView {
+        let viewController = FilmGridView()
+        let presenter = FilmGridPresenter(viewController: viewController)
+        let networkManager = DefaultNetworkManager()
+        let interactor = FilmGridInteractor(presenter: presenter, networkManager: networkManager)
+        viewController.interactor = interactor
+        viewController.router = FilmGridRouter(viewController: viewController)
+        return viewController
+    }
 }
