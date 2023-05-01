@@ -5,10 +5,11 @@
 //  Created by Sergey Tarasov on 19.12.2022.
 //
 
+import Foundation
 import NetworkLayer
 
 protocol FilmBusinessLogic {
-    func getFilm(with request: FilmModule.GetFilm.Request) async throws
+    func getFilm(with request: FilmModule.GetFilm.Request) async
 }
 
 final class FilmInteractor: FilmBusinessLogic {
@@ -31,6 +32,8 @@ final class FilmInteractor: FilmBusinessLogic {
         } catch {
             response = .init(result: .failure(error))
         }
-        self.presenter.update(with: response)
+        DispatchQueue.main.async { [weak self] in
+            self?.presenter.update(with: response)
+        }
     }
 }
