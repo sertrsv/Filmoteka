@@ -35,7 +35,6 @@ final class FilmGridCell: UICollectionViewCell {
 	private var posterViewConstraints: [NSLayoutConstraint] {
 		return [
 			posterView.topAnchor.constraint(equalTo: contentView.topAnchor),
-			posterView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -40),
 			posterView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
 			posterView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
 		]
@@ -43,7 +42,7 @@ final class FilmGridCell: UICollectionViewCell {
 
 	private var titleLabelConstraints: [NSLayoutConstraint] {
 		return [
-			titleLabel.topAnchor.constraint(equalTo: posterView.bottomAnchor),
+			titleLabel.topAnchor.constraint(equalTo: posterView.bottomAnchor, constant: 6),
 			titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
 			titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
 			titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
@@ -99,22 +98,11 @@ final class FilmGridCell: UICollectionViewCell {
 	}
 
 	func update(with item: FilmGridView.Item) {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+        }
 		titleLabel.text = item.title
 		accessibilityLabel = item.title
-		imageProvider.fetchImage(url: item.imageUrl) { [weak self] result in
-			DispatchQueue.main.async {
-				self?.activityIndicator.stopAnimating()
-			}
-			switch result {
-			case let .success(image):
-				DispatchQueue.main.async {
-					self?.posterView.image = image
-				}
-			case .failure:
-				DispatchQueue.main.async {
-					self?.posterView.image = UIImage(systemName: "questionmark")
-				}
-			}
-		}
+        posterView.fetchImage(from: item.imageUrl)
 	}
 }

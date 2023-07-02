@@ -40,8 +40,8 @@ enum FilmRequestFactory {
 
 	private var queryItems: [URLQueryItem] {
 		return [
-			.init(name: "year", value: "2022"),
-			.init(name: "month", value: "DECEMBER")
+			.init(name: "year", value: "2023"),
+			.init(name: "month", value: Date.now.month.uppercased())
 		]
 	}
 

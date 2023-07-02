@@ -5,34 +5,35 @@
 //  Created by Sergey Tarasov on 19.12.2022.
 //
 
+import Foundation
 import NetworkLayer
 
 protocol FilmBusinessLogic {
-	func getFilm(with request: FilmModule.GetFilm.Request)
+    func getFilm(with request: FilmModule.GetFilm.Request) async
 }
 
 final class FilmInteractor: FilmBusinessLogic {
-	private let presenter: FilmPresentationLogic
-	private let networkClient: NetworkClient
-	private let filmId: Int
+    private let presenter: FilmPresentationLogic
+    private let networkManager: NetworkManager
+    private let filmId: Int
 
-	init(presenter: FilmPresentationLogic, networkClient: NetworkClient, filmId: Int) {
-		self.presenter = presenter
-		self.networkClient = networkClient
-		self.filmId = filmId
-	}
+    init(presenter: FilmPresentationLogic, networkManager: NetworkManager, filmId: Int) {
+        self.presenter = presenter
+        self.networkManager = networkManager
+        self.filmId = filmId
+    }
 
-	func getFilm(with request: FilmModule.GetFilm.Request) {
-		let request = FilmRequestFactory.item(id: filmId).makeRequest()
-		networkClient.perform(request: request) { [weak self] (result: Result<FilmResponse, NetworkError>) in
-			let response: FilmModule.GetFilm.Response
-			switch result {
-			case let .success(film):
-				response = .init(result: .success(film))
-			case let .failure(error):
-				response = .init(result: .failure(error))
-			}
-			self?.presenter.update(with: response)
-		}
-	}
+    func getFilm(with request: FilmModule.GetFilm.Request) async {
+        let request = FilmRequestFactory.item(id: filmId).makeRequest()
+        let response: FilmModule.GetFilm.Response
+        do {
+            let film = try await networkManager.perform(request: request, for: FilmResponse.self)
+            response = .init(result: .success(film))
+        } catch {
+            response = .init(result: .failure(error))
+        }
+        DispatchQueue.main.async { [weak self] in
+            self?.presenter.update(with: response)
+        }
+    }
 }
