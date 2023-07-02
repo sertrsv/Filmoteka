@@ -28,8 +28,6 @@ final class FilmGridCell: UICollectionViewCell {
 		return indicator
 	}()
 
-	private var imageProvider = ImageProvider()
-
 	private var staticConstraints: [NSLayoutConstraint] = []
 
 	private var posterViewConstraints: [NSLayoutConstraint] {

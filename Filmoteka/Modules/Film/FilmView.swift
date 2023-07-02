@@ -49,8 +49,6 @@ final class FilmView: UIViewController {
 	var interactor: FilmBusinessLogic?
 	var router: FilmRoutingLogic?
 
-	private var imageProvider = ImageProvider()
-
 	// MARK: - Constraints
 
 	private var staticConstraints: [NSLayoutConstraint] = []
