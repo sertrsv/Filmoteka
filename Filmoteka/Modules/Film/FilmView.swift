@@ -128,24 +128,13 @@ final class FilmView: UIViewController {
 
 extension FilmView: FilmViewDisplayLogic {
 	func update(with viewModel: FilmModule.GetFilm.ViewModel) {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+        }
 		switch viewModel.result {
 		case let .success(film):
 			descriptionLabel.text = film.description
-			imageProvider.fetchImage(url: film.posterUrl) { [weak self] result in
-				DispatchQueue.main.async {
-					self?.activityIndicator.stopAnimating()
-				}
-				switch result {
-				case let .success(image):
-					DispatchQueue.main.async {
-						self?.posterView.image = image
-					}
-				case let .failure(error):
-					DispatchQueue.main.async {
-						self?.router?.presentAlert(error: error)
-					}
-				}
-			}
+            posterView.fetchImage(from: film.posterUrl)
 		case let .failure(error):
 			router?.presentAlert(error: error)
 		}

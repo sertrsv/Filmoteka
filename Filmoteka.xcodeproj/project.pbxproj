@@ -11,6 +11,8 @@
 		2F183D37294AC9EC00E4FEDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F183D36294AC9EC00E4FEDF /* SceneDelegate.swift */; };
 		2F183D3E294AC9ED00E4FEDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F183D3D294AC9ED00E4FEDF /* Assets.xcassets */; };
 		2F183D41294AC9ED00E4FEDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F183D3F294AC9ED00E4FEDF /* LaunchScreen.storyboard */; };
+		2F2CD7F62A51BB84000AD7BF /* UIImageView+fetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2CD7F52A51BB84000AD7BF /* UIImageView+fetchImage.swift */; };
+		2F3AA0DD2A1FFC1C00AB058D /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2F3AA0DC2A1FFC1C00AB058D /* Config.xcconfig */; };
 		2F6A5227294C600400A5C556 /* NetworkLayer in Resources */ = {isa = PBXBuildFile; fileRef = 2F6A5226294C600400A5C556 /* NetworkLayer */; };
 		2F8D5DE62A1D58BA005AC163 /* Date+month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D5DE52A1D58BA005AC163 /* Date+month.swift */; };
 		2F94EE90294C692800175F80 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EE8F294C692800175F80 /* AppConfig.swift */; };
@@ -45,6 +47,8 @@
 		2F183D3D294AC9ED00E4FEDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F183D40294AC9ED00E4FEDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F183D42294AC9ED00E4FEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F2CD7F52A51BB84000AD7BF /* UIImageView+fetchImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+fetchImage.swift"; sourceTree = "<group>"; };
+		2F3AA0DC2A1FFC1C00AB058D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		2F6A5226294C600400A5C556 /* NetworkLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkLayer; sourceTree = "<group>"; };
 		2F8D5DE52A1D58BA005AC163 /* Date+month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+month.swift"; sourceTree = "<group>"; };
 		2F94EE8F294C692800175F80 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 				2F183D42294AC9ED00E4FEDF /* Info.plist */,
 				2F183D3F294AC9ED00E4FEDF /* LaunchScreen.storyboard */,
 				2F94EE7C294C628500175F80 /* Resources */,
+				2F3AA0DC2A1FFC1C00AB058D /* Config.xcconfig */,
 			);
 			path = "Main Layer";
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				2F94EEAD294C9DFE00175F80 /* UICollectionView-dequeue.swift */,
 				2F94EEAF294C9E0A00175F80 /* UICollectionView-register.swift */,
 				2F8D5DE52A1D58BA005AC163 /* Date+month.swift */,
+				2F2CD7F52A51BB84000AD7BF /* UIImageView+fetchImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F3AA0DD2A1FFC1C00AB058D /* Config.xcconfig in Resources */,
 				2F6A5227294C600400A5C556 /* NetworkLayer in Resources */,
 				2F183D41294AC9ED00E4FEDF /* LaunchScreen.storyboard in Resources */,
 				2F183D3E294AC9ED00E4FEDF /* Assets.xcassets in Resources */,
@@ -322,6 +329,7 @@
 				2FB04512294F7CC000B8FCCF /* FilmGridFactory.swift in Sources */,
 				2F94EEA3294C95C100175F80 /* FilmGridInteractor.swift in Sources */,
 				2F94EEB0294C9E0A00175F80 /* UICollectionView-register.swift in Sources */,
+				2F2CD7F62A51BB84000AD7BF /* UIImageView+fetchImage.swift in Sources */,
 				2F94EE92294C69D700175F80 /* FilmResponse.swift in Sources */,
 				2FB0451729502DBA00B8FCCF /* FilmModule.swift in Sources */,
 				2F94EEAC294C9DE500175F80 /* String-className.swift in Sources */,
@@ -477,6 +485,7 @@
 		};
 		2F183D46294AC9ED00E4FEDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F3AA0DC2A1FFC1C00AB058D /* Config.xcconfig */;
 			buildSettings = {
 				API_URL = "https://kinopoiskapiunofficial.tech/api/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

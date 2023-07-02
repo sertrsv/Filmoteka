@@ -98,22 +98,11 @@ final class FilmGridCell: UICollectionViewCell {
 	}
 
 	func update(with item: FilmGridView.Item) {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+        }
 		titleLabel.text = item.title
 		accessibilityLabel = item.title
-		imageProvider.fetchImage(url: item.imageUrl) { [weak self] result in
-			DispatchQueue.main.async {
-				self?.activityIndicator.stopAnimating()
-			}
-			switch result {
-			case let .success(image):
-				DispatchQueue.main.async {
-					self?.posterView.image = image
-				}
-			case .failure:
-				DispatchQueue.main.async {
-					self?.posterView.image = UIImage(systemName: "questionmark")
-				}
-			}
-		}
+        posterView.fetchImage(from: item.imageUrl)
 	}
 }
