@@ -31,7 +31,6 @@
 		2F94EEAE294C9DFE00175F80 /* UICollectionView-dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EEAD294C9DFE00175F80 /* UICollectionView-dequeue.swift */; };
 		2F94EEB0294C9E0A00175F80 /* UICollectionView-register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94EEAF294C9E0A00175F80 /* UICollectionView-register.swift */; };
 		2FB04512294F7CC000B8FCCF /* FilmGridFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB04511294F7CC000B8FCCF /* FilmGridFactory.swift */; };
-		2FB04514294F892200B8FCCF /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB04513294F892200B8FCCF /* ImageProvider.swift */; };
 		2FB0451729502DBA00B8FCCF /* FilmModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0451629502DBA00B8FCCF /* FilmModule.swift */; };
 		2FB045192950309800B8FCCF /* FilmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB045182950309800B8FCCF /* FilmView.swift */; };
 		2FB0451B295030BA00B8FCCF /* FilmFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0451A295030BA00B8FCCF /* FilmFactory.swift */; };
@@ -66,7 +65,6 @@
 		2F94EEAD294C9DFE00175F80 /* UICollectionView-dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView-dequeue.swift"; sourceTree = "<group>"; };
 		2F94EEAF294C9E0A00175F80 /* UICollectionView-register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView-register.swift"; sourceTree = "<group>"; };
 		2FB04511294F7CC000B8FCCF /* FilmGridFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmGridFactory.swift; sourceTree = "<group>"; };
-		2FB04513294F892200B8FCCF /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		2FB0451629502DBA00B8FCCF /* FilmModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModule.swift; sourceTree = "<group>"; };
 		2FB045182950309800B8FCCF /* FilmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmView.swift; sourceTree = "<group>"; };
 		2FB0451A295030BA00B8FCCF /* FilmFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmFactory.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 			children = (
 				2F94EE80294C630500175F80 /* Film */,
 				2F94EE7F294C62FE00175F80 /* FilmGrid */,
-				2FB04515294F954E00B8FCCF /* Helpers */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -219,14 +216,6 @@
 				2F2CD7F52A51BB84000AD7BF /* UIImageView+fetchImage.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2FB04515294F954E00B8FCCF /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				2FB04513294F892200B8FCCF /* ImageProvider.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,7 +326,6 @@
 				2F94EEAE294C9DFE00175F80 /* UICollectionView-dequeue.swift in Sources */,
 				2FB045192950309800B8FCCF /* FilmView.swift in Sources */,
 				2F94EE96294C6A2A00175F80 /* FilmRequestFactory.swift in Sources */,
-				2FB04514294F892200B8FCCF /* ImageProvider.swift in Sources */,
 				2F94EEA1294C95B600175F80 /* FilmGridRouter.swift in Sources */,
 				2F94EE9D294C90A000175F80 /* FilmGridModule.swift in Sources */,
 				2F183D35294AC9EC00E4FEDF /* AppDelegate.swift in Sources */,
