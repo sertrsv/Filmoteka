@@ -8,7 +8,7 @@
 import NetworkLayer
 import SwiftUI
 
-final class FilmFactory {
+struct FilmFactory {
     private let filmId: Int
 
     init(filmId: Int) {
