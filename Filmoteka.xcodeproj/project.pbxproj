@@ -39,6 +39,7 @@
 		2FB04521295030DF00B8FCCF /* FilmPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB04520295030DF00B8FCCF /* FilmPresenter.swift */; };
 		2FFCD11D2A5BB1FF00502D31 /* FilmSUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD11C2A5BB1FF00502D31 /* FilmSUIView.swift */; };
 		2FFCD11F2A5BB22F00502D31 /* FilmSUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD11E2A5BB22F00502D31 /* FilmSUIViewModel.swift */; };
+		2FFCD1242A5BD60D00502D31 /* FilmModuleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD1232A5BD60D00502D31 /* FilmModuleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		2FB04520295030DF00B8FCCF /* FilmPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmPresenter.swift; sourceTree = "<group>"; };
 		2FFCD11C2A5BB1FF00502D31 /* FilmSUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSUIView.swift; sourceTree = "<group>"; };
 		2FFCD11E2A5BB22F00502D31 /* FilmSUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSUIViewModel.swift; sourceTree = "<group>"; };
+		2FFCD1232A5BD60D00502D31 /* FilmModuleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModuleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				2F94EE79294C626500175F80 /* Data Layer */,
 				2F94EE7E294C62D200175F80 /* Modules */,
 				2F94EEAA294C9DA700175F80 /* Extensions */,
+				2FFCD1222A5BD56D00502D31 /* Preview Content */,
 			);
 			path = Filmoteka;
 			sourceTree = "<group>";
@@ -240,6 +243,14 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		2FFCD1222A5BD56D00502D31 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2FFCD1232A5BD60D00502D31 /* FilmModuleData.swift */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -344,6 +355,7 @@
 				2F94EE92294C69D700175F80 /* FilmResponse.swift in Sources */,
 				2FB0451729502DBA00B8FCCF /* FilmModule.swift in Sources */,
 				2F94EEAC294C9DE500175F80 /* String-className.swift in Sources */,
+				2FFCD1242A5BD60D00502D31 /* FilmModuleData.swift in Sources */,
 				2FFCD11F2A5BB22F00502D31 /* FilmSUIViewModel.swift in Sources */,
 				2F94EE90294C692800175F80 /* AppConfig.swift in Sources */,
 				2F94EEAE294C9DFE00175F80 /* UICollectionView-dequeue.swift in Sources */,
@@ -504,6 +516,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Filmoteka/Preview\\ Content";
 				DEVELOPMENT_TEAM = QPX4P42KC5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Filmoteka/Main Layer/Info.plist";
@@ -533,6 +546,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Filmoteka/Preview\\ Content";
 				DEVELOPMENT_TEAM = QPX4P42KC5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Filmoteka/Main Layer/Info.plist";

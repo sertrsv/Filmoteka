@@ -72,13 +72,11 @@ struct FilmSUIView_Previews: PreviewProvider {
         return store
     }
 
-    // swiftlint:disable line_length
-
     final class FilmInteractorStub: FilmBusinessLogic {
         weak var store: FilmViewDisplayLogic?
 
         func getFilm(with request: FilmModule.GetFilm.Request) async {
-            let film = FilmModule.Film(id: 1, title: "Title", posterUrl: "https://via.placeholder.com/400x600", description: "Culpa veniam labore occaecat esse ipsum elit laboris incididunt. Ex do nulla consectetur cupidatat pariatur anim do veniam excepteur tempor. Do officia magna eiusmod nisi. Nostrud consectetur ut exercitation officia. Velit in est enim nostrud reprehenderit occaecat dolor.")
+            let film: FilmModule.Film = .film1
             store?.update(with: FilmModule.GetFilm.ViewModel(result: .success(film)))
         }
     }
