@@ -37,6 +37,8 @@
 		2FB0451D295030C500B8FCCF /* FilmRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0451C295030C500B8FCCF /* FilmRouter.swift */; };
 		2FB0451F295030D500B8FCCF /* FilmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0451E295030D500B8FCCF /* FilmInteractor.swift */; };
 		2FB04521295030DF00B8FCCF /* FilmPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB04520295030DF00B8FCCF /* FilmPresenter.swift */; };
+		2FFCD11D2A5BB1FF00502D31 /* FilmSUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD11C2A5BB1FF00502D31 /* FilmSUIView.swift */; };
+		2FFCD11F2A5BB22F00502D31 /* FilmSUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD11E2A5BB22F00502D31 /* FilmSUIViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		2FB0451C295030C500B8FCCF /* FilmRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRouter.swift; sourceTree = "<group>"; };
 		2FB0451E295030D500B8FCCF /* FilmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmInteractor.swift; sourceTree = "<group>"; };
 		2FB04520295030DF00B8FCCF /* FilmPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmPresenter.swift; sourceTree = "<group>"; };
+		2FFCD11C2A5BB1FF00502D31 /* FilmSUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSUIView.swift; sourceTree = "<group>"; };
+		2FFCD11E2A5BB22F00502D31 /* FilmSUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSUIViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,8 @@
 				2FB0451E295030D500B8FCCF /* FilmInteractor.swift */,
 				2FB04520295030DF00B8FCCF /* FilmPresenter.swift */,
 				2FB045182950309800B8FCCF /* FilmView.swift */,
+				2FFCD11C2A5BB1FF00502D31 /* FilmSUIView.swift */,
+				2FFCD11E2A5BB22F00502D31 /* FilmSUIViewModel.swift */,
 			);
 			path = Film;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				2F94EE92294C69D700175F80 /* FilmResponse.swift in Sources */,
 				2FB0451729502DBA00B8FCCF /* FilmModule.swift in Sources */,
 				2F94EEAC294C9DE500175F80 /* String-className.swift in Sources */,
+				2FFCD11F2A5BB22F00502D31 /* FilmSUIViewModel.swift in Sources */,
 				2F94EE90294C692800175F80 /* AppConfig.swift in Sources */,
 				2F94EEAE294C9DFE00175F80 /* UICollectionView-dequeue.swift in Sources */,
 				2FB045192950309800B8FCCF /* FilmView.swift in Sources */,
@@ -329,6 +336,7 @@
 				2F94EEA1294C95B600175F80 /* FilmGridRouter.swift in Sources */,
 				2F94EE9D294C90A000175F80 /* FilmGridModule.swift in Sources */,
 				2F183D35294AC9EC00E4FEDF /* AppDelegate.swift in Sources */,
+				2FFCD11D2A5BB1FF00502D31 /* FilmSUIView.swift in Sources */,
 				2FB04521295030DF00B8FCCF /* FilmPresenter.swift in Sources */,
 				2FB0451D295030C500B8FCCF /* FilmRouter.swift in Sources */,
 				2F94EEA5294C968C00175F80 /* FilmGridPresenter.swift in Sources */,

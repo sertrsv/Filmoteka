@@ -6,6 +6,7 @@
 //
 
 import NetworkLayer
+import SwiftUI
 
 final class FilmFactory {
     private let filmId: Int
@@ -21,6 +22,17 @@ final class FilmFactory {
         let interactor = FilmInteractor(presenter: presenter, networkManager: networkManager, filmId: filmId)
         viewController.interactor = interactor
         viewController.router = FilmRouter(viewController: viewController)
+        return viewController
+    }
+
+    func createSUIViewController() -> UIViewController {
+        let store = FilmSUIViewModel()
+        let viewController = UIHostingController(rootView: FilmSUIView(store: store))
+        let presenter = FilmPresenter(viewController: store)
+        let networkManager = DefaultNetworkManager()
+        let interactor = FilmInteractor(presenter: presenter, networkManager: networkManager, filmId: filmId)
+        store.interactor = interactor
+        store.router = FilmRouter(viewController: viewController)
         return viewController
     }
 }

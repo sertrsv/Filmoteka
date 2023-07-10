@@ -21,7 +21,7 @@ final class FilmGridRouter: FilmGridRoutingLogic {
 
 	func route(to film: FilmGridModule.Film) {
 		let factory = FilmFactory(filmId: film.id)
-		let view = factory.createViewController()
+		let view = factory.createSUIViewController()
 		view.navigationItem.title = film.title
 		view.navigationItem.largeTitleDisplayMode = .never
 		viewController?.navigationController?.pushViewController(view, animated: true)
