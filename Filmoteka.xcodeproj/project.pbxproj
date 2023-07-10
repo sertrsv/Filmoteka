@@ -188,9 +188,8 @@
 				2FB0451C295030C500B8FCCF /* FilmRouter.swift */,
 				2FB0451E295030D500B8FCCF /* FilmInteractor.swift */,
 				2FB04520295030DF00B8FCCF /* FilmPresenter.swift */,
-				2FB045182950309800B8FCCF /* FilmView.swift */,
-				2FFCD11C2A5BB1FF00502D31 /* FilmSUIView.swift */,
-				2FFCD11E2A5BB22F00502D31 /* FilmSUIViewModel.swift */,
+				2FFCD1202A5BD38B00502D31 /* UIKit */,
+				2FFCD1212A5BD39700502D31 /* SwiftUI */,
 			);
 			path = Film;
 			sourceTree = "<group>";
@@ -222,6 +221,23 @@
 				2F2CD7F52A51BB84000AD7BF /* UIImageView+fetchImage.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2FFCD1202A5BD38B00502D31 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2FB045182950309800B8FCCF /* FilmView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		2FFCD1212A5BD39700502D31 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				2FFCD11C2A5BB1FF00502D31 /* FilmSUIView.swift */,
+				2FFCD11E2A5BB22F00502D31 /* FilmSUIViewModel.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
