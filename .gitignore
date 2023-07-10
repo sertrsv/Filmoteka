@@ -184,3 +184,8 @@ xcuserdata/
 ####
 # UNKNOWN: recommended by others, but I can't discover what these files are
 #
+
+####
+# Token in Config.xcconfig file
+
+Config.xcconfig
