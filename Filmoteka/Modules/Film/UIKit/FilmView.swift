@@ -91,6 +91,14 @@ final class FilmView: UIViewController {
 
 	// MARK: - Life Cycle
 
+    override func loadView() {
+        super.loadView()
+        view.addSubview(scrollView)
+        scrollView.addSubview(posterView)
+        scrollView.addSubview(descriptionLabel)
+        scrollView.addSubview(activityIndicator)
+    }
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupComponents()
@@ -112,11 +120,7 @@ final class FilmView: UIViewController {
 	// MARK: - Functions
 
 	private func setupComponents() {
-		view.addSubview(scrollView)
 		view.backgroundColor = .systemBackground
-		scrollView.addSubview(posterView)
-		scrollView.addSubview(descriptionLabel)
-		scrollView.addSubview(activityIndicator)
 		activityIndicator.startAnimating()
 		view.setNeedsUpdateConstraints()
 	}

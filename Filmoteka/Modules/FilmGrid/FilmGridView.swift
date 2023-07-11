@@ -60,6 +60,11 @@ final class FilmGridView: UIViewController {
 
 	// MARK: - Life Cycle
 
+    override func loadView() {
+        super.loadView()
+        view.addSubview(collectionView)
+    }
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupComponents()
@@ -80,7 +85,6 @@ final class FilmGridView: UIViewController {
 	private func setupComponents() {
 		title = "Премьеры"
 		navigationController?.navigationBar.prefersLargeTitles = true
-		view.addSubview(collectionView)
 		view.setNeedsUpdateConstraints()
 	}
 
