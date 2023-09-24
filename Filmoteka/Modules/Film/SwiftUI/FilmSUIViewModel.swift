@@ -19,11 +19,9 @@ final class FilmSUIViewModel: ObservableObject {
     var interactor: FilmBusinessLogic?
     var router: FilmRoutingLogic?
 
-    func onAppear() {
+    func onAppear() async {
         let request = FilmModule.GetFilm.Request()
-        Task {
-            await interactor?.getFilm(with: request)
-        }
+        await interactor?.getFilm(with: request)
     }
 }
 

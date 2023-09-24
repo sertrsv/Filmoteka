@@ -16,7 +16,7 @@ struct FilmSUIView: View {
             if store.isLoading {
                 ProgressView()
                     .task {
-                        store.onAppear()
+                        await store.onAppear()
                     }
             } else {
                 ScrollView {
