@@ -58,8 +58,8 @@ final class FilmView: UIViewController {
 		return [
 			scrollView.topAnchor.constraint(equalTo: safeArea.topAnchor),
 			scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-			scrollView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-			scrollView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)
+			scrollView.leftAnchor.constraint(equalTo: safeArea.leftAnchor),
+			scrollView.rightAnchor.constraint(equalTo: safeArea.rightAnchor)
 		]
 	}
 
