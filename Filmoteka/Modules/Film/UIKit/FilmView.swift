@@ -130,9 +130,7 @@ final class FilmView: UIViewController {
 
 extension FilmView: FilmViewDisplayLogic {
 	func update(with viewModel: FilmModule.GetFilm.ViewModel) {
-        DispatchQueue.main.async {
-            self.activityIndicator.stopAnimating()
-        }
+        self.activityIndicator.stopAnimating()
 		switch viewModel.result {
 		case let .success(film):
 			descriptionLabel.text = film.description
