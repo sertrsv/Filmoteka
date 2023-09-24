@@ -38,8 +38,9 @@ struct FilmSUIView: View {
                             Image(systemName: "questionmark.square.dashed")
                         }
                     }
+                    .frame(maxWidth: .infinity, minHeight: 500)
                     Text(store.text)
-                        .padding([.horizontal, .bottom])
+                        .padding()
                 }
             }
         }
