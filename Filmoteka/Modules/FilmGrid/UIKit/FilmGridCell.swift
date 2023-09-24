@@ -96,9 +96,7 @@ final class FilmGridCell: UICollectionViewCell {
 	}
 
 	func update(with item: FilmGridView.Item) {
-        DispatchQueue.main.async {
-            self.activityIndicator.stopAnimating()
-        }
+        self.activityIndicator.stopAnimating()
 		titleLabel.text = item.title
 		accessibilityLabel = item.title
         posterView.fetchImage(from: item.imageUrl)
