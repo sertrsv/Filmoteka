@@ -12,6 +12,8 @@
 		2F183D3E294AC9ED00E4FEDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F183D3D294AC9ED00E4FEDF /* Assets.xcassets */; };
 		2F183D41294AC9ED00E4FEDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F183D3F294AC9ED00E4FEDF /* LaunchScreen.storyboard */; };
 		2F2CD7F62A51BB84000AD7BF /* UIImageView+fetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2CD7F52A51BB84000AD7BF /* UIImageView+fetchImage.swift */; };
+		2F36A4632AC0369100806E35 /* FilmGridSUICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A4622AC0369100806E35 /* FilmGridSUICell.swift */; };
+		2F36A4652AC0398E00806E35 /* FilmGridSUICellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A4642AC0398E00806E35 /* FilmGridSUICellView.swift */; };
 		2F3AA0DD2A1FFC1C00AB058D /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2F3AA0DC2A1FFC1C00AB058D /* Config.xcconfig */; };
 		2F6A5227294C600400A5C556 /* NetworkLayer in Resources */ = {isa = PBXBuildFile; fileRef = 2F6A5226294C600400A5C556 /* NetworkLayer */; };
 		2F8D5DE62A1D58BA005AC163 /* Date+month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D5DE52A1D58BA005AC163 /* Date+month.swift */; };
@@ -50,6 +52,8 @@
 		2F183D40294AC9ED00E4FEDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F183D42294AC9ED00E4FEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F2CD7F52A51BB84000AD7BF /* UIImageView+fetchImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+fetchImage.swift"; sourceTree = "<group>"; };
+		2F36A4622AC0369100806E35 /* FilmGridSUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmGridSUICell.swift; sourceTree = "<group>"; };
+		2F36A4642AC0398E00806E35 /* FilmGridSUICellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmGridSUICellView.swift; sourceTree = "<group>"; };
 		2F3AA0DC2A1FFC1C00AB058D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		2F6A5226294C600400A5C556 /* NetworkLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkLayer; sourceTree = "<group>"; };
 		2F8D5DE52A1D58BA005AC163 /* Date+month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+month.swift"; sourceTree = "<group>"; };
@@ -120,6 +124,23 @@
 			path = Filmoteka;
 			sourceTree = "<group>";
 		};
+		2F36A4602AC0360800806E35 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2F94EEA8294C9B6800175F80 /* FilmGridCell.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		2F36A4612AC0361400806E35 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				2F36A4622AC0369100806E35 /* FilmGridSUICell.swift */,
+				2F36A4642AC0398E00806E35 /* FilmGridSUICellView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		2F6A5221294C5F3C00A5C556 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +199,8 @@
 				2F94EEA4294C968C00175F80 /* FilmGridPresenter.swift */,
 				2F94EEA6294C9B4B00175F80 /* FilmGridDataSource.swift */,
 				2F94EE9E294C95AB00175F80 /* FilmGridView.swift */,
-				2F94EEA8294C9B6800175F80 /* FilmGridCell.swift */,
+				2F36A4602AC0360800806E35 /* UIKit */,
+				2F36A4612AC0361400806E35 /* SwiftUI */,
 			);
 			path = FilmGrid;
 			sourceTree = "<group>";
@@ -356,6 +378,8 @@
 				2FB0451729502DBA00B8FCCF /* FilmModule.swift in Sources */,
 				2F94EEAC294C9DE500175F80 /* String-className.swift in Sources */,
 				2FFCD1242A5BD60D00502D31 /* FilmModuleData.swift in Sources */,
+				2F36A4652AC0398E00806E35 /* FilmGridSUICellView.swift in Sources */,
+				2F36A4632AC0369100806E35 /* FilmGridSUICell.swift in Sources */,
 				2FFCD11F2A5BB22F00502D31 /* FilmSUIViewModel.swift in Sources */,
 				2F94EE90294C692800175F80 /* AppConfig.swift in Sources */,
 				2F94EEAE294C9DFE00175F80 /* UICollectionView-dequeue.swift in Sources */,
