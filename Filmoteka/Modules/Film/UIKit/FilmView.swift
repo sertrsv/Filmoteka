@@ -58,8 +58,8 @@ final class FilmView: UIViewController {
 		return [
 			scrollView.topAnchor.constraint(equalTo: safeArea.topAnchor),
 			scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-			scrollView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-			scrollView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)
+			scrollView.leftAnchor.constraint(equalTo: safeArea.leftAnchor),
+			scrollView.rightAnchor.constraint(equalTo: safeArea.rightAnchor)
 		]
 	}
 
@@ -91,6 +91,14 @@ final class FilmView: UIViewController {
 
 	// MARK: - Life Cycle
 
+    override func loadView() {
+        super.loadView()
+        view.addSubview(scrollView)
+        scrollView.addSubview(posterView)
+        scrollView.addSubview(descriptionLabel)
+        scrollView.addSubview(activityIndicator)
+    }
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupComponents()
@@ -112,11 +120,7 @@ final class FilmView: UIViewController {
 	// MARK: - Functions
 
 	private func setupComponents() {
-		view.addSubview(scrollView)
 		view.backgroundColor = .systemBackground
-		scrollView.addSubview(posterView)
-		scrollView.addSubview(descriptionLabel)
-		scrollView.addSubview(activityIndicator)
 		activityIndicator.startAnimating()
 		view.setNeedsUpdateConstraints()
 	}
@@ -126,9 +130,7 @@ final class FilmView: UIViewController {
 
 extension FilmView: FilmViewDisplayLogic {
 	func update(with viewModel: FilmModule.GetFilm.ViewModel) {
-        DispatchQueue.main.async {
-            self.activityIndicator.stopAnimating()
-        }
+        self.activityIndicator.stopAnimating()
 		switch viewModel.result {
 		case let .success(film):
 			descriptionLabel.text = film.description

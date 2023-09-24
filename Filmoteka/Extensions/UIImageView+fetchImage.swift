@@ -14,8 +14,8 @@ extension UIImageView {
 
     func fetchImage(from urlString: String) {
         guard let url = URL(string: urlString) else {
-            DispatchQueue.main.async {
-                self.image = Self.placeholder
+            DispatchQueue.main.async { [weak self] in
+                self?.image = Self.placeholder
             }
             return
         }
@@ -25,46 +25,36 @@ extension UIImageView {
     func fetchImage(from url: URL) {
         let imageKey = NSString(string: url.absoluteString)
         if let image = Self.cache.object(forKey: imageKey) {
-            DispatchQueue.main.async {
-                self.image = image
+            DispatchQueue.main.async { [weak self] in
+                self?.image = image
             }
             return
         }
         let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                DispatchQueue.main.async {
-                    self.image = Self.placeholder
+            var newImage: UIImage? = Self.placeholder
+            defer {
+                DispatchQueue.main.async { [weak self] in
+                    self?.image = newImage
                 }
+            }
+            if error != nil {
                 return
             }
             guard let response = response as? HTTPURLResponse else {
-                DispatchQueue.main.async {
-                    self.image = Self.placeholder
-                }
                 return
             }
             guard let data = data else {
-                DispatchQueue.main.async {
-                    self.image = Self.placeholder
-                }
                 return
             }
             switch response.statusCode {
             case 200...299:
                 guard let image = UIImage(data: data) else {
-                    DispatchQueue.main.async {
-                        self.image = Self.placeholder
-                    }
                     return
                 }
                 Self.cache.setObject(image, forKey: imageKey)
-                DispatchQueue.main.async {
-                    self.image = image
-                }
+                newImage = image
             default:
-                DispatchQueue.main.async {
-                    self.image = Self.placeholder
-                }
+                return
             }
         }
         dataTask.resume()

@@ -7,7 +7,7 @@
 
 import NetworkLayer
 
-final class FilmGridFactory {
+struct FilmGridFactory {
     init() {}
 
     func createViewController() -> FilmGridView {
